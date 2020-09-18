@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
     end
+  end
 
     # ストロングパラメーター
     def user_params
@@ -22,7 +23,7 @@ class SessionsController < ApplicationController
       log_out
       redirect_to root_url, info: 'ログアウトしました'
     end
-  end
+
 
   private
   def log_in(user)
